@@ -1,115 +1,211 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Diana Horodko | Переклад та мовні консультації</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ФОП Городько Діана | Мовні консультації та переклад</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: "Georgia", serif;
-    background-color: #f5f5f5;
-    color: #1f2a44;
-    line-height: 1.7;
+:root{
+  --navy:#1f2a44;
+  --gold:#c6a75e;
+  --bg:#f5f5f5;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --border:#e5e7eb;
 }
 
-.wrapper {
-    max-width: 1000px;
-    margin: auto;
-    padding: 80px 25px;
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family: "Georgia", serif;
+  background:var(--bg);
+  color:var(--navy);
+  line-height:1.75;
 }
 
-.hero {
-    background: linear-gradient(rgba(31,42,68,0.85), rgba(31,42,68,0.85)),
-    url('https://images.unsplash.com/photo-1521791136064-7986c2920216');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 160px 20px;
+a{ color:inherit; }
+
+.hero{
+  background:
+    linear-gradient(rgba(31,42,68,0.86), rgba(31,42,68,0.86)),
+    url("header.jpg");
+  background-size:cover;
+  background-position:center;
+  color:#fff;
+  text-align:center;
+  padding:150px 20px;
 }
 
-.hero h1 {
-    font-size: 46px;
-    margin-bottom: 15px;
-    letter-spacing: 1px;
+.hero h1{
+  margin:0 0 12px 0;
+  font-size:44px;
+  font-weight:500;
+  letter-spacing:0.8px;
 }
 
-.hero p {
-    font-size: 20px;
-    margin-bottom: 35px;
+.hero p{
+  margin:0 auto 28px auto;
+  max-width:900px;
+  font-size:18px;
+  color:rgba(255,255,255,0.9);
 }
 
-.btn {
-    background: #c6a75e;
-    color: white;
-    padding: 14px 34px;
-    text-decoration: none;
-    font-weight: bold;
-    letter-spacing: 1px;
-    border-radius: 3px;
+.hero .cta{
+  display:inline-block;
+  background:var(--gold);
+  color:#fff;
+  text-decoration:none;
+  padding:14px 28px;
+  border-radius:6px;
+  font-weight:700;
+  letter-spacing:0.6px;
 }
 
-.section-title {
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: 30px;
+.wrap{
+  max-width:1000px;
+  margin:0 auto;
+  padding:70px 20px;
 }
 
-.services {
-    text-align: center;
+.section-title{
+  font-size:26px;
+  font-weight:500;
+  margin:0 0 18px 0;
+  letter-spacing:0.3px;
 }
 
-.services p {
-    max-width: 700px;
-    margin: 0 auto 20px auto;
+.lead{
+  color:var(--muted);
+  max-width:860px;
+  margin:0 0 26px 0;
 }
 
-.form-section {
-    background: white;
-    padding: 60px;
-    border-radius: 6px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+.grid{
+  display:grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap:22px;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
+@media (max-width: 900px){
+  .grid{ grid-template-columns: 1fr; }
+  .hero{ padding:110px 20px; }
+  .hero h1{ font-size:36px; }
 }
 
-input, textarea {
-    padding: 14px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    font-family: inherit;
-    font-size: 15px;
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:26px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
 }
 
-input:focus, textarea:focus {
-    outline: none;
-    border: 1px solid #c6a75e;
+ul{
+  margin:0;
+  padding-left:18px;
 }
 
-button {
-    background: #1f2a44;
-    color: white;
-    padding: 14px;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
+.badge{
+  display:inline-block;
+  border:1px solid rgba(198,167,94,0.35);
+  color:var(--navy);
+  background:rgba(198,167,94,0.12);
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:13px;
+  margin:0 0 14px 0;
 }
 
-button:hover {
-    background: #c6a75e;
+.form-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
 }
 
-footer {
-    text-align: center;
-    padding: 40px 20px;
-    font-size: 14px;
-    background: #1f2a44;
-    color: white;
+@media (max-width: 650px){
+  .form-row{ grid-template-columns:1fr; }
+}
+
+label{
+  font-size:13px;
+  color:var(--muted);
+  display:block;
+  margin:0 0 6px 0;
+}
+
+input, textarea, select{
+  width:100%;
+  padding:12px 12px;
+  border:1px solid var(--border);
+  border-radius:8px;
+  font-family:inherit;
+  font-size:15px;
+  background:#fff;
+}
+
+input:focus, textarea:focus, select:focus{
+  outline:none;
+  border-color:rgba(198,167,94,0.9);
+  box-shadow:0 0 0 3px rgba(198,167,94,0.18);
+}
+
+textarea{ min-height:140px; resize:vertical; }
+
+.actions{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  flex-wrap:wrap;
+  margin-top:10px;
+}
+
+button{
+  background:var(--navy);
+  color:#fff;
+  border:none;
+  padding:12px 18px;
+  border-radius:8px;
+  font-weight:700;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+button:hover{ transform:translateY(-1px); background:#243152; }
+
+.small{
+  font-size:13px;
+  color:var(--muted);
+  margin:10px 0 0 0;
+}
+
+.kv{
+  margin:0;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.kv strong{ color:var(--navy); }
+
+.footer{
+  background:var(--navy);
+  color:rgba(255,255,255,0.92);
+  padding:34px 20px;
+}
+
+.footer .inner{
+  max-width:1000px;
+  margin:0 auto;
+  font-size:14px;
+}
+
+.footer a{ color:#fff; }
+
+hr.sep{
+  border:0;
+  border-top:1px solid var(--border);
+  margin:40px 0;
 }
 </style>
 </head>
@@ -117,31 +213,126 @@ footer {
 <body>
 
 <header class="hero">
-    <h1>Diana Horodko</h1>
-    <p>Професійний переклад та мовні консультації</p>
-    <a href="#contact" class="btn">Замовити консультацію</a>
+  <h1>ФОП Городько Діана Володимирівна</h1>
+  <p>Мовні консультації та англійсько-український переклад для бізнесу й приватних клієнтів. Точно, конфіденційно, в узгоджені терміни.</p>
+  <a class="cta" href="#contact">Записатися на консультацію</a>
 </header>
 
-<section class="wrapper services">
-    <h2 class="section-title">Послуги</h2>
-    <p>Надаю професійні переклади та індивідуальні мовні консультації для бізнесу та приватних клієнтів.</p>
-    <p>Гарантую конфіденційність, точність та відповідальність у кожному проєкті.</p>
-</section>
+<main class="wrap">
 
-<section class="wrapper">
-    <div class="form-section" id="contact">
-        <h2 class="section-title">Запит на консультацію</h2>
-        <form action="https://formspree.io/f/https://formspree.io/f/xeelropl" method="POST">
-            <input type="text" name="name" placeholder="Ваше ім’я" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <textarea name="message" rows="5" placeholder="Коротко опишіть ваш запит" required></textarea>
-            <button type="submit">Надіслати запит</button>
-        </form>
+  <section>
+    <div class="badge">Основний фокус — консультації</div>
+    <h2 class="section-title">Чим можу допомогти</h2>
+    <p class="lead">
+      Консультації щодо формулювань, ділового листування, підготовки англомовних текстів
+      та коректності перекладу. За потреби — письмовий переклад EN ↔ UA.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3 class="section-title" style="font-size:20px; margin-top:0;">Мовні консультації</h3>
+        <ul>
+          <li>Пояснення помилок і рекомендації по тексту</li>
+          <li>Редагування офіційних формулювань</li>
+          <li>Допомога з листами англійською (для бізнесу/клієнтів)</li>
+          <li>Підготовка текстів для міжнародної комунікації</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3 class="section-title" style="font-size:20px; margin-top:0;">Письмовий переклад</h3>
+        <ul>
+          <li>EN ↔ UA</li>
+          <li>Договори та документація</li>
+          <li>Комерційні пропозиції</li>
+          <li>Тексти для сайтів</li>
+          <li>Коректура/редагування</li>
+        </ul>
+      </div>
     </div>
-</section>
+  </section>
 
-<footer>
-© 2026 Diana Horodko | Всі права захищені
+  <hr class="sep" />
+
+  <section id="contact">
+    <h2 class="section-title">Запит на консультацію</h2>
+    <p class="lead">Залиште заявку — я відповім найближчим часом.</p>
+
+    <div class="card">
+      <!-- ЗАМІНИ ВАШ_EMAIL на реальний email -->
+      <form action="https://formsubmit.co/ВАШ_EMAIL" method="POST">
+        <!-- Налаштування FormSubmit -->
+        <input type="hidden" name="_captcha" value="false" />
+        <!-- ЗАМІНИ нижче на свій реальний URL "thankyou.html" -->
+        <input type="hidden" name="_next" value="https://твій_логін.github.io/назва-репозиторію/thankyou.html" />
+        <input type="hidden" name="_subject" value="Нова заявка з сайту (консультація)" />
+
+        <div class="form-row">
+          <div>
+            <label for="name">Ваше ім’я</label>
+            <input id="name" type="text" name="name" placeholder="Наприклад, Андрій" required />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" placeholder="name@email.com" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div>
+            <label for="service">Тема запиту</label>
+            <select id="service" name="topic" required>
+              <option value="" selected disabled>Оберіть варіант</option>
+              <option>Мовна консультація</option>
+              <option>Редагування / коректура</option>
+              <option>Письмовий переклад EN ↔ UA</option>
+              <option>Інше</option>
+            </select>
+          </div>
+          <div>
+            <label for="phone">Телефон (необов’язково)</label>
+            <input id="phone" type="tel" name="phone" placeholder="+380..." />
+          </div>
+        </div>
+
+        <div>
+          <label for="message">Опис запиту</label>
+          <textarea id="message" name="message" placeholder="Коротко опишіть, що потрібно. За бажанням вставте текст або фрагмент." required></textarea>
+        </div>
+
+        <div class="actions">
+          <button type="submit">Надіслати запит</button>
+          <a href="tel:+380936942936" style="font-weight:700; text-decoration:none;">📞 +380936942936</a>
+        </div>
+
+        <p class="small">
+          Натискаючи “Надіслати запит”, ви погоджуєтесь з <a href="privacy.html">Політикою конфіденційності</a>.
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <hr class="sep" />
+
+  <section>
+    <h2 class="section-title">Реквізити та контакти</h2>
+    <div class="card">
+      <p class="kv"><strong>ФОП:</strong> Городько Діана Володимирівна</p>
+      <p class="kv"><strong>ІПН:</strong> 3571910585 <span style="color:#9ca3af;">(заміни на реальний)</span></p>
+      <p class="kv"><strong>Адреса:</strong> Україна, 78203, Івано-Франківська обл.,м. Коломия.</p>
+      <p class="kv"><strong>Телефон:</strong> <a href="tel:+380936942936">+380936942936</a></p>
+     </div>
+    <p class="small" style="margin-top:12px;">
+      Порада: заміни картинку шапки на свою — завантаж файл <strong>header.jpg</strong> у репозиторій поруч з index.html.
+    </p>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="inner">
+    © 2026 ФОП Городько Діана Володимирівна · <a href="privacy.html">Політика конфіденційності</a>
+  </div>
 </footer>
 
 </body>
